@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+body{
+    background-color:rgb(246, 245, 244); 
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: black;
+    position: sticky;
+    top: 0;                /* Align to the top of the viewport */
+    left: 0;               /* Align to the left of the viewport */
+    width: 90%;  
+    z-index: 1000;       /* Full width of the page */
+}
+.logo{
+    cursor: pointer;
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: orange;
+    
+}
+.nav-links{
+    list-style: none;
+}
+.nav-links li{
+    display: inline-block;
+    padding: 0px 10px;
+}
+.nav-links li a
+{
+    transition: 0.5s;
+    font-weight: bold;
+    
+}
+.nav-links li a:hover
+{
+    color: orange;
+}
+.nav-link {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: orange;
+}
+
+.nav-link.active {
+    color: orange;
+    font-weight: bold;
+}
+
+.logo header.nav-links li a
+{
+    position: fixed;
+    
+}
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.main
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header-todo
+{
+   padding-top: 90px;
+   padding-bottom: 50px;
+   font-size: 50px;
+   letter-spacing: 3px;
+}
+#input-box,#add_btn
+{ 
+    margin: 5px;
+}
+#input-box 
+{
+    padding: 10px;
+    width: 500px;
+    height: 40px;
+    border: none;
+    font-size: 25px;
+    color: black;
+    border-radius: 30px;
+    box-shadow: 0px 0px 2px 2px rgb(105, 104, 106);
+}
+#input-box1
+{
+    padding: 10px;
+    width: 250px;
+    height: 40px;
+    border: none;
+    font-size: 25px;
+    color: black;
+    border-radius: 30px;
+    box-shadow: 0px 0px 2px 2px rgb(105, 104, 106);
+}
+#label-media
+{
+    text-decoration: none;
+    font-size: 0px;
+}
+.date-placeholder::before {
+    content: attr(data-placeholder);
+    color: gray;
+    position: absolute;
+    pointer-events: none;
+    margin-left: 10px;
+    display: none; 
+}
+
+.date-placeholder:not(:placeholder-shown)::before {
+    content: ""; 
+}
+#add_btn{
+    border-radius: 20px;
+    padding: 10px;
+    width: 200px;
+    font-size: 30px;
+    height: 60px; 
+    border: none;
+    margin-bottom: 120px;
+    background-color:rgb(255, 189, 59);
+    transition: 0.5s;
+}
+#add_btn:active
+{
+    box-shadow: 0px 0px 2px 2px rgb(182, 142, 60);
+}
+.task-button
+{
+    padding-top: 20px;
+}
+.task-button button
+{
+    width: 150px;
+    height: 50px;
+    position: sticky;
+    color: rgb(17, 55, 125);
+    font-size: 20px;
+    margin-left: auto;
+    transition: 0.5s;
+    border-radius: 10px;
+    
+}
+.task-button button:hover{
+    background-color:rgb(191, 219, 254);
+    
+}
+.deletebut{
+    margin-right: 20px   
+}
+.list-dis {
+    padding: 5px;
+    margin: 10px;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+.user-input {
+    padding-bottom: 60px;
+
+}
+#completedTaskList{
+    text-decoration: line-through;
+}
+
+#Task{
+   padding-top: 100px;
+    
+}
+#Task h2{
+    font-size: 35px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+#CompletedTasks
+{
+    padding:40px  65px;
+}
+
+#CompletedTasks h2{
+    font-size: 35px;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    #input-box{
+        width: 300px;
+    }
+    #input-box1{
+        width: 300px;
+    }
+    .user-input
+    {  
+        margin: 50px;
+        display: block;
+    }
+    .date-placeholder::before {
+        display: block;
+    }
+    #label-media
+    {
+    font-size: 20px;
+    margin-left: 10px;
+    font-weight: bold;
+    }
+   
+}
+   
+    
+
